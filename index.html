@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>MathLingo - Aprenda Matemática</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonte parecida com Duolingo -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-br from-blue-500 to-blue-900">
+
+    <!-- ============================
+         HEADER
+    ================================ -->
+    <header class="w-full bg-white shadow-md py-4 px-6 flex justify-between items-center sticky top-0 z-50 bg-gradient-to-r from-[#2A3A50] to-blue-700">
+        <h1 class="text-2xl font-extrabold text-white">📘 MathLingo</h1>
+
+        <nav class="hidden md:flex gap-6 font-bold">
+            <a href="#" class="text-white hover:text-black">Início</a>
+            <a href="#" class="text-white hover:text-black">Exercícios</a>
+            <a href="#" class="text-white hover:text-black">Ranking</a>
+            <a href="#" class="text-white hover:text-black">Perfil</a>
+        </nav>
+
+        <button class="bg-green-500 hover:bg-green-600 text-white font-bold px-4 py-2 rounded-full">
+            Entrar
+        </button>
+    </header>
+
+
+    <!-- ============================
+         HERO
+    ================================ -->
+    <section class="flex flex-col md:flex-row items-center justify-between px-10 py-16">
+
+        <div class="max-w-lg">
+            <h1 class="text-5xl font-extrabold text-white leading-tight">
+                Aprenda Matemática de um jeito divertido!
+            </h1>
+
+            <p class="text-lg mt-4">
+                Pratique, evolua e ganhe recompensas. Como o Duolingo, só que para a matemática!
+            </p>
+
+            <button class="mt-6 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 font-extrabold rounded-full text-lg">
+                Começar Agora
+            </button>
+        </div>
+
+        <img src="img/math_hero.png" class="w-80 md:w-96 mt-10 md:mt-0 animate-bounce-slow" alt="">
+    </section>
+
+    <!-- Animação custom -->
+<img src="img/math_hero.png" class="w-80 md:w-96 mt-10 md:mt-0 animate-bounce" alt="">
+
+    <!-- ============================
+         TRILHAS
+    ================================ -->
+    <section class="px-10 py-16 text-center">
+        <h2 class="text-4xl font-extrabold text-white mb-12">Trilhas de Aprendizado</h2>
+
+        <div class="flex flex-wrap justify-center gap-10">
+
+            <!-- Card -->
+            <div class="bg-white shadow-lg p-6 rounded-2xl w-64 hover:-translate-y-2 transition">
+                <img src="img/icone_basico.png" class="w-28 mx-auto mb-4">
+                <h3 class="text-xl font-extrabold text-blue-700">Matemática Básica</h3>
+                <p class="text-gray-600 mt-2">Operações essenciais para todos os níveis.</p>
+                <button class="mt-4 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full font-bold">
+                    Começar
+                </button>
+            </div>
+
+            <!-- Card -->
+            <div class="bg-white shadow-lg p-6 rounded-2xl w-64 hover:-translate-y-2 transition">
+                <img src="img/icone_alg.png" class="w-28 mx-auto mb-4">
+                <h3 class="text-xl font-extrabold text-blue-700">Álgebra</h3>
+                <p class="text-gray-600 mt-2">Equações, incógnitas e expressões.</p>
+                <button class="mt-4 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full font-bold">
+                    Começar
+                </button>
+            </div>
+
+            <!-- Card -->
+            <div class="bg-white shadow-lg p-6 rounded-2xl w-64 hover:-translate-y-2 transition">
+                <img src="img/icone_geo.png" class="w-28 mx-auto mb-4">
+                <h3 class="text-xl font-extrabold text-blue-700">Geometria</h3>
+                <p class="text-gray-600 mt-2">Figuras, ângulos e áreas.</p>
+                <button class="mt-4 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full font-bold">
+                    Começar
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============================
+         FOOTER
+    ================================ -->
+    <footer class="text-center py-6 bg-white shadow-inner font-bold mt-10">
+        © 2025 MathLingo. Todos os direitos reservados.
+    </footer>
+
+</body>
+
+</html>
