@@ -10,7 +10,7 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Fonte parecida com Duolingo -->
+    <!-- Fonte estilo Duolingo -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
 
     <style>
@@ -23,23 +23,42 @@
 <body class="bg-gradient-to-br from-blue-500 to-blue-900">
 
     <!-- ============================
-         HEADER
+         HEADER RESPONSIVO
     ================================ -->
-    <header class="w-full bg-white shadow-md py-4 px-6 flex justify-between items-center sticky top-0 z-50 bg-gradient-to-r from-[#2A3A50] to-blue-700">
+    <header
+        class="w-full bg-gradient-to-r from-[#2A3A50] to-blue-700 shadow-md py-4 px-6 flex items-center justify-between sticky top-0 z-50">
+
         <h1 class="text-2xl font-extrabold text-white">📘 MathLingo</h1>
 
+        <!-- MENU DESKTOP -->
         <nav class="hidden md:flex gap-6 font-bold">
-            <a href="#" class="text-white hover:text-black">Início</a>
-            <a href="#" class="text-white hover:text-black">Exercícios</a>
-            <a href="#" class="text-white hover:text-black">Ranking</a>
-            <a href="#" class="text-white hover:text-black">Perfil</a>
+            <a href="index.html" class="text-white hover:text-black border-b-2 pb-1">Início</a>
+            <a href="exercicio.html" class="text-white hover:text-black">Exercícios</a>
+            <a href="trilhas.html" class="text-white hover:text-black">Trilhas</a>
+            <a href="perfil.html" class="text-white hover:text-black">Perfil</a>
         </nav>
 
-        <button class="bg-green-500 hover:bg-green-600 text-white font-bold px-4 py-2 rounded-full">
+        <!-- BOTÃO DESKTOP -->
+        <a href="login.html"
+            class="hidden md:block bg-green-500 hover:bg-green-600 text-white font-bold px-4 py-2 rounded-full">
             Entrar
-        </button>
+        </a>
+
+        <!-- BOTÃO MOBILE -->
+        <button onclick="toggleMenu()" class="md:hidden text-white text-3xl">☰</button>
     </header>
 
+    <!-- MENU MOBILE -->
+    <div id="mobileMenu" class="hidden bg-blue-900 text-white p-4 text-lg font-bold flex flex-col space-y-4">
+        <a href="index.html">Início</a>
+        <a href="exercicio.html">Exercícios</a>
+        <a href="trilhas.html">Trilhas</a>
+        <a href="perfil.html">Perfil</a>
+
+        <a href="login.html" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full font-bold w-32">
+            Entrar
+        </a>
+    </div>
 
     <!-- ============================
          HERO
@@ -51,68 +70,111 @@
                 Aprenda Matemática de um jeito divertido!
             </h1>
 
-            <p class="text-lg mt-4">
-                Pratique, evolua e ganhe recompensas. Como o Duolingo, só que para a matemática!
+            <p class="text-lg mt-4 text-white">
+                Pratique, evolua e ganhe recompensas. Como o Duolingo, só que para matemática!
             </p>
 
-            <button class="mt-6 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 font-extrabold rounded-full text-lg">
+            <a href="trilhas.html"
+                class="mt-6 inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 font-extrabold rounded-full text-lg">
                 Começar Agora
-            </button>
+            </a>
         </div>
 
-        <img src="img/math_hero.png" class="w-80 md:w-96 mt-10 md:mt-0 animate-bounce-slow" alt="">
+        <img src="img/math_hero.png" class="w-80 md:w-96 mt-10 md:mt-0 animate-bounce" alt="">
     </section>
 
-    <!-- Animação custom -->
-<img src="img/math_hero.png" class="w-80 md:w-96 mt-10 md:mt-0 animate-bounce" alt="">
 
     <!-- ============================
-         TRILHAS
+        COMO FUNCIONA
+    ================================ -->
+    <section class="px-10 py-16 text-center">
+        <h2 class="text-4xl font-extrabold text-white mb-12">Como Funciona?</h2>
+
+        <div id="comoFuncionaContainer" class="flex flex-wrap justify-center gap-12"></div>
+    </section>
+
+    <!-- ============================
+        TRILHAS DE APRENDIZADO
     ================================ -->
     <section class="px-10 py-16 text-center">
         <h2 class="text-4xl font-extrabold text-white mb-12">Trilhas de Aprendizado</h2>
 
-        <div class="flex flex-wrap justify-center gap-10">
-
-            <!-- Card -->
-            <div class="bg-white shadow-lg p-6 rounded-2xl w-64 hover:-translate-y-2 transition">
-                <img src="img/icone_basico.png" class="w-28 mx-auto mb-4">
-                <h3 class="text-xl font-extrabold text-blue-700">Matemática Básica</h3>
-                <p class="text-gray-600 mt-2">Operações essenciais para todos os níveis.</p>
-                <button class="mt-4 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full font-bold">
-                    Começar
-                </button>
-            </div>
-
-            <!-- Card -->
-            <div class="bg-white shadow-lg p-6 rounded-2xl w-64 hover:-translate-y-2 transition">
-                <img src="img/icone_alg.png" class="w-28 mx-auto mb-4">
-                <h3 class="text-xl font-extrabold text-blue-700">Álgebra</h3>
-                <p class="text-gray-600 mt-2">Equações, incógnitas e expressões.</p>
-                <button class="mt-4 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full font-bold">
-                    Começar
-                </button>
-            </div>
-
-            <!-- Card -->
-            <div class="bg-white shadow-lg p-6 rounded-2xl w-64 hover:-translate-y-2 transition">
-                <img src="img/icone_geo.png" class="w-28 mx-auto mb-4">
-                <h3 class="text-xl font-extrabold text-blue-700">Geometria</h3>
-                <p class="text-gray-600 mt-2">Figuras, ângulos e áreas.</p>
-                <button class="mt-4 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full font-bold">
-                    Começar
-                </button>
-            </div>
-
-        </div>
+        <div id="cardsContainer" class="flex flex-wrap justify-center gap-10"></div>
     </section>
 
     <!-- ============================
          FOOTER
     ================================ -->
-    <footer class="text-center py-6 bg-white shadow-inner font-bold mt-10">
-        © 2025 MathLingo. Todos os direitos reservados.
+    <footer class="text-center py-10 bg-gradient-to-r from-blue-900 to-[#1a2433] text-white mt-10">
+        <h3 class="font-extrabold text-xl mb-3">MathLingo</h3>
+
+        <p class="mb-4 opacity-70">Aprenda matemática de forma gamificada.</p>
+
+        <div class="flex justify-center gap-6 text-lg">
+            <a href="#" class="hover:text-green-400">Contato</a>
+            <a href="#" class="hover:text-green-400">Política</a>
+            <a href="#" class="hover:text-green-400">Sobre nós</a>
+        </div>
+
+        <p class="mt-6 opacity-50">© 2025 MathLingo - Todos os direitos reservados.</p>
     </footer>
+
+    <!-- ============================
+         SCRIPTS
+    ================================ -->
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("mobileMenu").classList.toggle("hidden");
+        }
+    </script>
+
+    <!-- COMO FUNCIONA JS -->
+    <script>
+        const comoFunciona = [
+            { emoji: "📘", titulo: "Pratique", texto: "Exercícios interativos e divertidos." },
+            { emoji: "🏅", titulo: "XP", texto: "Aumente sua série diária e evolua." },
+            { emoji: "🚀", titulo: "Evolua", texto: "Desbloqueie níveis e desafios." }
+        ];
+
+        const comoFuncionaContainer = document.getElementById("comoFuncionaContainer");
+
+        comoFunciona.forEach(item => {
+            comoFuncionaContainer.innerHTML += `
+                <div class="bg-white w-64 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
+                    <span class="text-blue-700 text-5xl">${item.emoji}</span>
+                    <h3 class="text-xl font-extrabold mt-4">${item.titulo}</h3>
+                    <p class="text-gray-600 mt-2">${item.texto}</p>
+                </div>
+            `;
+        });
+    </script>
+
+    <!-- TRILHAS JS -->
+    <script>
+        const trilhas = [
+            { nome: "Matemática Básica", descricao: "Operações essenciais para todos os níveis.", icone: "img/icone_basico.png" },
+            { nome: "Álgebra", descricao: "Equações, incógnitas e expressões.", icone: "img/icone_alg.png" },
+            { nome: "Geometria", descricao: "Figuras, ângulos e áreas.", icone: "img/icone_geo.png" },
+            { nome: "Cálculo", descricao: "Derivadas, integrais e limites.", icone: "img/icone_calc.png" },
+            { nome: "Estatística", descricao: "Probabilidade, gráficos e análises.", icone: "img/icone_estat.png" }
+        ];
+
+        const container = document.getElementById("cardsContainer");
+
+        trilhas.forEach(trilha => {
+            container.innerHTML += `
+                <div class="bg-white shadow-lg p-6 rounded-2xl w-64 hover:-translate-y-2 transition">
+                    <img src="${trilha.icone}" class="w-28 mx-auto mb-4">
+                    <h3 class="text-xl font-extrabold text-blue-700">${trilha.nome}</h3>
+                    <p class="text-gray-600 mt-2">${trilha.descricao}</p>
+                    <a href="trilhas.html" class="mt-4 inline-block bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full font-bold">
+                        Começar
+                    </a>
+                </div>
+            `;
+        });
+    </script>
 
 </body>
 
